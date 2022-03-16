@@ -128,7 +128,7 @@ resource "aws_route53_health_check" "healthcheck" {
 ###############
 
 module "slack" { source = "./slack" }
-module "slack_beta" { source = "./slack-beta" }
+module "slack_beta" { source = "./slack/beta" }
 
 ###############
 #   OUTPUTS   #
