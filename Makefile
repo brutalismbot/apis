@@ -1,14 +1,13 @@
-plan: | .terraform
+init:
+	terraform init
+
+plan:
 	terraform plan
 
-apply: | .terraform
+apply:
 	terraform apply
 
 clean:
 	rm -rf .terraform*
 
-.PHONY: build clean plan apply
-
-.terraform .terraform.lock.hcl:
-	terraform init
-	touch $@
+.PHONY: init plan apply clean
