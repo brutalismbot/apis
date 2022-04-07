@@ -25,16 +25,18 @@ oauth_config:
       - chat:write.public
       - commands
       - incoming-webhook
+      - links:read
+      - links:write
 settings:
   event_subscriptions:
     request_url: https://api.brutalismbot.com/slack/beta/events
     bot_events:
       - app_home_opened
       - app_uninstalled
+      - link_shared
   interactivity:
     is_enabled: true
     request_url: https://api.brutalismbot.com/slack/beta/callbacks
   org_deploy_enabled: false
   socket_mode_enabled: false
   token_rotation_enabled: false
-
